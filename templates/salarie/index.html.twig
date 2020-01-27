@@ -1,11 +1,20 @@
 {% extends 'base.html.twig' %}
 
 
-
 {% block body %}
-<a href="{{ path('salarie_add')}}">Ajouter</a>
+ <div class="container">
+   
+    
+    <h1> SALARIES</h1>
+<ul><li><a href="{{ path('home') }}">Sommaire</a></li>
+	<li><a href="{{ path('salarie_add')}}">Ajouter</a></li>
+	
+</ul>
 
-<table>
+
+
+
+<table class="table">
 	<thead>
 		<tr>
 			<th>SALARIE      </th>
@@ -32,5 +41,6 @@
 		{% endfor %}
 	</tbody>
 </table>
+ </div>
 
 {% endblock %}

@@ -58,4 +58,17 @@ class EntrepriseRepository extends ServiceEntityRepository
         );
         return $query->execute();
     } 
+    
+    public function getRaisonSociale(){
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+                        'SELECT e.raison_sociale, COUNT(*) AS NB
+                            FROM App\Entity\Salarie s, App\Entity\Entreprise e
+                            WHERE s.entreprise_id = e.id
+                            GROUP BY s.entreprise_id
+                            ORDER by NB DESC'
+
+        );
+        return $query->execute();
+    } 
 }
