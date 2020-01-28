@@ -8,14 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 	/**
-     * @Route("/entreprises")
+     * @Route("/entreprise")
      */
 
 class EntrepriseController extends AbstractController
 {
 	
     /**
-     * @Route("/", name="entreprises_index")
+     * @Route("/", name="entreprise_index")
      */
 
     public function index()

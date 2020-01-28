@@ -21,7 +21,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 	/**
-     * @Route("/salaries")
+     * @Route("/salarie")
      */
 class SalarieController extends AbstractController
 {
@@ -63,7 +63,7 @@ class SalarieController extends AbstractController
     	$manager->persist($salarie);
     	$manager->flush();
 
-    	return $this->redirectToRoute('salaries_index');
+    	return $this->redirectToRoute('salarie_index');
 
     }
     return $this->render('salarie/add_edit.html.twig', [
@@ -74,7 +74,7 @@ class SalarieController extends AbstractController
 
 
     /**
-     * @Route("/", name="salaries_index")
+     * @Route("/", name="salarie_index")
      */
     public function index()
     {	
